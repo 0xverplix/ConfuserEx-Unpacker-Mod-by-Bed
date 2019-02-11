@@ -1,4 +1,4 @@
-# ConfuserEx Unpacker 2
+# ConfuserEx Unpacker 2 (Supports Trinity & Netguard 4.5)
 
 # STILL UNDER BETA
 
