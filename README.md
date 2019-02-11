@@ -2,6 +2,9 @@
 
 # STILL UNDER BETA
 
+This is my own "mod" of this unpacker, ive added constant support for 2 parameter decryption support (Netguard 4.5, Ben Mhenni 4.5), and i added support for 3 parameters with string (Trinity). Added support for the packer in trinity and also added many different mutation removers that will come in handy for custom mods. You can easily clean programs piece by piece or however you want by editing the program.cs.
+
+////////////////////////////////////////////////////////////
 
 A new and updated version of my last unpacker for confuserex which people actually seem to use so i thought i would update it and actually make it better as that version is very poor
 
@@ -21,3 +24,4 @@ Credits
 TheProxy for his Reference Proxy Remover
 Shadow Anti Tamper remover
 0xd4d dnlib/de4dot
+cawk confuserex-unpacker / mutation removers
