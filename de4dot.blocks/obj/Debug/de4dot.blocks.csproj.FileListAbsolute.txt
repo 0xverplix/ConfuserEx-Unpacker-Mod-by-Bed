@@ -1,0 +1,7 @@
+C:\Users\buett\Desktop\New folder\ConfuserEx-Unpacker-2-master\Debug\bin\de4dot.blocks.dll
+C:\Users\buett\Desktop\New folder\ConfuserEx-Unpacker-2-master\Debug\bin\de4dot.blocks.pdb
+C:\Users\buett\Desktop\New folder\ConfuserEx-Unpacker-2-master\de4dot.blocks\obj\Debug\de4dot.blocks.csprojAssemblyReference.cache
+C:\Users\buett\Desktop\New folder\ConfuserEx-Unpacker-2-master\de4dot.blocks\obj\Debug\de4dot.blocks.csproj.CoreCompileInputs.cache
+C:\Users\buett\Desktop\New folder\ConfuserEx-Unpacker-2-master\de4dot.blocks\obj\Debug\de4dot.blocks.csproj.CopyComplete
+C:\Users\buett\Desktop\New folder\ConfuserEx-Unpacker-2-master\de4dot.blocks\obj\Debug\de4dot.blocks.dll
+C:\Users\buett\Desktop\New folder\ConfuserEx-Unpacker-2-master\de4dot.blocks\obj\Debug\de4dot.blocks.pdb

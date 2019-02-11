@@ -1,0 +1,18 @@
+C:\Users\buett\Desktop\.NET-Instruction-Emulator-master\CawkEmulatorV4\bin\Debug\CawkEmulatorV4.dll
+C:\Users\buett\Desktop\.NET-Instruction-Emulator-master\CawkEmulatorV4\bin\Debug\CawkEmulatorV4.pdb
+C:\Users\buett\Desktop\.NET-Instruction-Emulator-master\CawkEmulatorV4\bin\Debug\dnlib.dll
+C:\Users\buett\Desktop\.NET-Instruction-Emulator-master\CawkEmulatorV4\bin\Debug\SharpDisasm.dll
+C:\Users\buett\Desktop\.NET-Instruction-Emulator-master\CawkEmulatorV4\bin\Debug\dnlib.pdb
+C:\Users\buett\Desktop\.NET-Instruction-Emulator-master\CawkEmulatorV4\bin\Debug\dnlib.xml
+C:\Users\buett\Desktop\.NET-Instruction-Emulator-master\CawkEmulatorV4\obj\Debug\CawkEmulatorV4.csproj.CoreCompileInputs.cache
+C:\Users\buett\Desktop\.NET-Instruction-Emulator-master\CawkEmulatorV4\obj\Debug\CawkEmulatorV4.csproj.CopyComplete
+C:\Users\buett\Desktop\.NET-Instruction-Emulator-master\CawkEmulatorV4\obj\Debug\CawkEmulatorV4.dll
+C:\Users\buett\Desktop\.NET-Instruction-Emulator-master\CawkEmulatorV4\obj\Debug\CawkEmulatorV4.pdb
+C:\Users\buett\Desktop\.NET-Instruction-Emulator-master\CawkEmulatorV4\obj\Debug\CawkEmulatorV4.csprojAssemblyReference.cache
+C:\Users\buett\Desktop\New folder\ConfuserEx-Unpacker-2-master\cawk-Emulator\.NET-Instruction-Emulator-master\CawkEmulatorV4\bin\Debug\CawkEmulatorV4.dll
+C:\Users\buett\Desktop\New folder\ConfuserEx-Unpacker-2-master\cawk-Emulator\.NET-Instruction-Emulator-master\CawkEmulatorV4\bin\Debug\CawkEmulatorV4.pdb
+C:\Users\buett\Desktop\New folder\ConfuserEx-Unpacker-2-master\cawk-Emulator\.NET-Instruction-Emulator-master\CawkEmulatorV4\obj\Debug\CawkEmulatorV4.csprojAssemblyReference.cache
+C:\Users\buett\Desktop\New folder\ConfuserEx-Unpacker-2-master\cawk-Emulator\.NET-Instruction-Emulator-master\CawkEmulatorV4\obj\Debug\CawkEmulatorV4.csproj.CoreCompileInputs.cache
+C:\Users\buett\Desktop\New folder\ConfuserEx-Unpacker-2-master\cawk-Emulator\.NET-Instruction-Emulator-master\CawkEmulatorV4\obj\Debug\CawkEmulatorV4.csproj.CopyComplete
+C:\Users\buett\Desktop\New folder\ConfuserEx-Unpacker-2-master\cawk-Emulator\.NET-Instruction-Emulator-master\CawkEmulatorV4\obj\Debug\CawkEmulatorV4.dll
+C:\Users\buett\Desktop\New folder\ConfuserEx-Unpacker-2-master\cawk-Emulator\.NET-Instruction-Emulator-master\CawkEmulatorV4\obj\Debug\CawkEmulatorV4.pdb
