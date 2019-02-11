@@ -16,27 +16,27 @@ namespace ConfuserEx_Unpacker
     {
         private static Base[] bases = new Base[]
         {
-            //new Protections.Antitamper.Remover(),
-            //     new Protections.Control_Flow.Remover(),
-            //new Protections.Compressor.Remover(),
+            new Protections.Antitamper.Remover(),
+                 new Protections.Control_Flow.Remover(),
+            new Protections.Compressor.Remover(),
             /////////////////////////////////////////////////////////////////
-            //   new Protections.Antitamper.Remover(),
-            //   new Protections.Control_Flow.Remover(),
-            //   new Protections.RefProxy.Remover(),
-            //   new Protections.Control_Flow.Remover(),
-            //   new Protections.RefProxy.Remover(),
-            //   new Protections.Mutations.AndFixer.Remover(),
-            //   new Protections.Mutations.DateTime.Remover(),
-            //   new Protections.Mutations.DecimalCompare.Remover(),
-            //   new Protections.Mutations.EmptyTypes.Remover(),
-            //   new Protections.Mutations.FieldMethods.Remover(),
-            //   new Protections.Mutations.IfInliner.Remover(),
-            //   new Protections.Mutations.Maths.Remover(),
-            //   new Protections.Mutations.NativeRemover.Remover(),
-            //   new Protections.Mutations.SizeOf.Remover(),
-            //   new Protections.Mutations.StringLength.Remover(),
-            //    new Protections.Control_Flow.Remover(),
-            //   new Protections.Constants.Remover()
+               new Protections.Antitamper.Remover(),
+               new Protections.Control_Flow.Remover(),
+               new Protections.RefProxy.Remover(),
+               new Protections.Control_Flow.Remover(),
+               new Protections.RefProxy.Remover(),
+               new Protections.Mutations.AndFixer.Remover(),
+               new Protections.Mutations.DateTime.Remover(),
+               new Protections.Mutations.DecimalCompare.Remover(),
+               new Protections.Mutations.EmptyTypes.Remover(),
+               new Protections.Mutations.FieldMethods.Remover(),
+               new Protections.Mutations.IfInliner.Remover(),
+               new Protections.Mutations.Maths.Remover(),
+               new Protections.Mutations.NativeRemover.Remover(),
+               new Protections.Mutations.SizeOf.Remover(),
+               new Protections.Mutations.StringLength.Remover(),
+                new Protections.Control_Flow.Remover(),
+               new Protections.Constants.Remover()
 
         };
         static void Main(string[] args)
@@ -57,11 +57,11 @@ namespace ConfuserEx_Unpacker
                 base1.Deobfuscate();
             }
 
-            if (Protections.Compressor.Remover.ModuleEp != 0)
-            {
-                //Base.ModuleDef.EntryPoint =
-                //    Base.ModuleDef.ResolveToken(Protections.Compressor.Remover.ModuleEp) as MethodDef;
-            }
+            //if (Protections.Compressor.Remover.ModuleEp != 0)
+            //{
+            //    Base.ModuleDef.EntryPoint =
+            //        Base.ModuleDef.ResolveToken(Protections.Compressor.Remover.ModuleEp) as MethodDef;
+            //}
 
             ModuleWriterOptions ModOpts = new ModuleWriterOptions(Base.ModuleDef);
             ModOpts.MetadataOptions.Flags = MetadataFlags.PreserveAll;
