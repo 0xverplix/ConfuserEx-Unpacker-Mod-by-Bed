@@ -18,6 +18,8 @@ namespace ConfuserEx_Unpacker.Protections.Constants
             byte[] bytes = InitaliseBytes(FindInitialiseMethod());
             if (bytes == null)
                 return;
+            MathsEquations.MathsFixer(ModuleDef);
+            SizeOf.SizeOfFixer(ModuleDef);
             DecryptionMethod(ModuleDef, bytes);
         }
         public static List<Instruction> C = new List<Instruction>();

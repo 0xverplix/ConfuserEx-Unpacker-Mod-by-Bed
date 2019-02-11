@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -22,10 +23,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -47,6 +48,18 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>39516EB7839C66F9BFCD9F9AD73464E34957FD03</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ConfuserEx Unpacker_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="dnlib, Version=3.1.0.0, Culture=neutral, PublicKeyToken=50e96378b6e77999, processorArchitecture=MSIL">
       <HintPath>..\packages\dnlib.3.1.0\lib\net461\dnlib.dll</HintPath>
@@ -66,30 +79,21 @@
     <Compile Include="Protections\Antitamper\Remover.cs" />
     <Compile Include="Protections\Base.cs" />
     <Compile Include="Protections\Compressor\Remover.cs" />
+    <Compile Include="Protections\Constants\MathsEquations.cs" />
     <Compile Include="Protections\Constants\Remover.cs" />
+    <Compile Include="Protections\Constants\SizeOf.cs" />
     <Compile Include="Protections\Control Flow\De4Dot.cs" />
     <Compile Include="Protections\Control Flow\Remover.cs" />
     <Compile Include="Protections\LZMA.cs" />
-    <Compile Include="Protections\Mutations\AndFixer\Remover.cs" />
-    <Compile Include="Protections\Mutations\DateTime\Remover.cs" />
-    <Compile Include="Protections\Mutations\DecimalCompare\Remover.cs" />
-    <Compile Include="Protections\Mutations\EmptyTypes\Remover.cs" />
-    <Compile Include="Protections\Mutations\FieldMethods\Remover.cs" />
-    <Compile Include="Protections\Mutations\IfInliner\Remover.cs" />
-    <Compile Include="Protections\Mutations\Maths\Remover.cs" />
-    <Compile Include="Protections\Mutations\NativeRemover\Remover.cs" />
-    <Compile Include="Protections\Mutations\SizeOf\Remover.cs" />
-    <Compile Include="Protections\Mutations\StringLength\Remover.cs" />
     <Compile Include="Protections\RefProxy\DelegateFinder.cs" />
     <Compile Include="Protections\RefProxy\DelegateFixer.cs" />
     <Compile Include="Protections\RefProxy\DelegateInitInfo.cs" />
     <Compile Include="Protections\RefProxy\Remover.cs" />
-    <Compile Include="Protections\Mutations\Maths\MathsEquations.cs" />
-    <Compile Include="Protections\Mutations\Maths\SizeOf.cs" />
     <Compile Include="Protections\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ConfuserEx Unpacker_TemporaryKey.pfx" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

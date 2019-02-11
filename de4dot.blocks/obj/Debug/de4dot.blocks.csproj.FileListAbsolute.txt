@@ -5,3 +5,9 @@ C:\Users\buett\Desktop\New folder\ConfuserEx-Unpacker-2-master\de4dot.blocks\obj
 C:\Users\buett\Desktop\New folder\ConfuserEx-Unpacker-2-master\de4dot.blocks\obj\Debug\de4dot.blocks.csproj.CopyComplete
 C:\Users\buett\Desktop\New folder\ConfuserEx-Unpacker-2-master\de4dot.blocks\obj\Debug\de4dot.blocks.dll
 C:\Users\buett\Desktop\New folder\ConfuserEx-Unpacker-2-master\de4dot.blocks\obj\Debug\de4dot.blocks.pdb
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\Debug\bin\de4dot.blocks.dll
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\Debug\bin\de4dot.blocks.pdb
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\de4dot.blocks\obj\Debug\de4dot.blocks.csproj.CoreCompileInputs.cache
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\de4dot.blocks\obj\Debug\de4dot.blocks.csproj.CopyComplete
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\de4dot.blocks\obj\Debug\de4dot.blocks.dll
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\de4dot.blocks\obj\Debug\de4dot.blocks.pdb

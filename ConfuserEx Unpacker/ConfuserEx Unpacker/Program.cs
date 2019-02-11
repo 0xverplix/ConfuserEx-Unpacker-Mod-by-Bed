@@ -25,16 +25,6 @@ namespace ConfuserEx_Unpacker
                new Protections.RefProxy.Remover(),
                new Protections.Control_Flow.Remover(),
                new Protections.RefProxy.Remover(),
-               new Protections.Mutations.AndFixer.Remover(),
-               new Protections.Mutations.DateTime.Remover(),
-               new Protections.Mutations.DecimalCompare.Remover(),
-               new Protections.Mutations.EmptyTypes.Remover(),
-               new Protections.Mutations.FieldMethods.Remover(),
-               new Protections.Mutations.IfInliner.Remover(),
-               new Protections.Mutations.Maths.Remover(),
-               new Protections.Mutations.NativeRemover.Remover(),
-               new Protections.Mutations.SizeOf.Remover(),
-               new Protections.Mutations.StringLength.Remover(),
                 new Protections.Control_Flow.Remover(),
                new Protections.Constants.Remover()
 
