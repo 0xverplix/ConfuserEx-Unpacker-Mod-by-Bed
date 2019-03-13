@@ -1,0 +1,20 @@
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\ConfuserEx Unpacker\ConfuserEx Unpacker\obj\Release\ConfuserEx Unpacker.csprojAssemblyReference.cache
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\ConfuserEx Unpacker\ConfuserEx Unpacker\obj\Release\ConfuserEx Unpacker.csproj.CoreCompileInputs.cache
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\ConfuserEx Unpacker\ConfuserEx Unpacker\bin\Release\ConfuserEx Unpacker.exe.config
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\ConfuserEx Unpacker\ConfuserEx Unpacker\bin\Release\ConfuserEx Unpacker.exe.manifest
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\ConfuserEx Unpacker\ConfuserEx Unpacker\bin\Release\ConfuserEx Unpacker.application
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\ConfuserEx Unpacker\ConfuserEx Unpacker\bin\Release\ConfuserEx Unpacker.exe
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\ConfuserEx Unpacker\ConfuserEx Unpacker\bin\Release\ConfuserEx Unpacker.pdb
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\ConfuserEx Unpacker\ConfuserEx Unpacker\bin\Release\CawkEmulatorV4.dll
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\ConfuserEx Unpacker\ConfuserEx Unpacker\bin\Release\de4dot.blocks.dll
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\ConfuserEx Unpacker\ConfuserEx Unpacker\bin\Release\dnlib.dll
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\ConfuserEx Unpacker\ConfuserEx Unpacker\bin\Release\SharpDisasm.dll
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\ConfuserEx Unpacker\ConfuserEx Unpacker\bin\Release\CawkEmulatorV4.pdb
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\ConfuserEx Unpacker\ConfuserEx Unpacker\bin\Release\de4dot.blocks.pdb
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\ConfuserEx Unpacker\ConfuserEx Unpacker\bin\Release\dnlib.pdb
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\ConfuserEx Unpacker\ConfuserEx Unpacker\bin\Release\dnlib.xml
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\ConfuserEx Unpacker\ConfuserEx Unpacker\obj\Release\ConfuserEx Unpacker.exe.manifest
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\ConfuserEx Unpacker\ConfuserEx Unpacker\obj\Release\ConfuserEx Unpacker.application
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\ConfuserEx Unpacker\ConfuserEx Unpacker\obj\Release\ConfuserEx Unpacker.csproj.CopyComplete
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\ConfuserEx Unpacker\ConfuserEx Unpacker\obj\Release\ConfuserEx Unpacker.exe
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\ConfuserEx Unpacker\ConfuserEx Unpacker\obj\Release\ConfuserEx Unpacker.pdb

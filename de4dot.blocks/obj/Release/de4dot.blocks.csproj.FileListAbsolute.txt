@@ -1,0 +1,6 @@
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\Release\bin\de4dot.blocks.dll
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\Release\bin\de4dot.blocks.pdb
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\de4dot.blocks\obj\Release\de4dot.blocks.csproj.CoreCompileInputs.cache
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\de4dot.blocks\obj\Release\de4dot.blocks.csproj.CopyComplete
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\de4dot.blocks\obj\Release\de4dot.blocks.dll
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\de4dot.blocks\obj\Release\de4dot.blocks.pdb

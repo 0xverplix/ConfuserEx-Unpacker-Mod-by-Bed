@@ -30,13 +30,14 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="dnlib">
-      <HintPath>..\..\..\Documents\Confuser Related Stuff\Debug\dnlib.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Desktop\unpacker\ConfuserEx-Unpacker-2-master\ConfuserEx Unpacker\ConfuserEx Unpacker\bin\Debug\dnlib.dll</HintPath>
     </Reference>
     <Reference Include="SharpDisasm">
-      <HintPath>..\..\..\Documents\Confuser Related Stuff\Debug\SharpDisasm.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Desktop\unpacker\ConfuserEx-Unpacker-2-master\ConfuserEx Unpacker\ConfuserEx Unpacker\bin\Debug\SharpDisasm.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

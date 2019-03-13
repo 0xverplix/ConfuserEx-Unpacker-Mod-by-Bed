@@ -11,3 +11,4 @@ C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\de4dot.blocks\obj\Debu
 C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\de4dot.blocks\obj\Debug\de4dot.blocks.csproj.CopyComplete
 C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\de4dot.blocks\obj\Debug\de4dot.blocks.dll
 C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\de4dot.blocks\obj\Debug\de4dot.blocks.pdb
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\de4dot.blocks\obj\Debug\de4dot.blocks.csprojAssemblyReference.cache

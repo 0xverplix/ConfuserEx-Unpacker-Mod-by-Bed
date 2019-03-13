@@ -1,0 +1,11 @@
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\cawk-Emulator\.NET-Instruction-Emulator-master\CawkEmulatorV4\obj\Release\CawkEmulatorV4.csprojAssemblyReference.cache
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\cawk-Emulator\.NET-Instruction-Emulator-master\CawkEmulatorV4\obj\Release\CawkEmulatorV4.csproj.CoreCompileInputs.cache
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\cawk-Emulator\.NET-Instruction-Emulator-master\CawkEmulatorV4\bin\Release\CawkEmulatorV4.dll
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\cawk-Emulator\.NET-Instruction-Emulator-master\CawkEmulatorV4\bin\Release\CawkEmulatorV4.pdb
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\cawk-Emulator\.NET-Instruction-Emulator-master\CawkEmulatorV4\bin\Release\dnlib.dll
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\cawk-Emulator\.NET-Instruction-Emulator-master\CawkEmulatorV4\bin\Release\SharpDisasm.dll
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\cawk-Emulator\.NET-Instruction-Emulator-master\CawkEmulatorV4\bin\Release\dnlib.pdb
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\cawk-Emulator\.NET-Instruction-Emulator-master\CawkEmulatorV4\bin\Release\dnlib.xml
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\cawk-Emulator\.NET-Instruction-Emulator-master\CawkEmulatorV4\obj\Release\CawkEmulatorV4.csproj.CopyComplete
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\cawk-Emulator\.NET-Instruction-Emulator-master\CawkEmulatorV4\obj\Release\CawkEmulatorV4.dll
+C:\Users\buett\Documents\repo\ConfuserEx-Unpacker-Dynamic\cawk-Emulator\.NET-Instruction-Emulator-master\CawkEmulatorV4\obj\Release\CawkEmulatorV4.pdb

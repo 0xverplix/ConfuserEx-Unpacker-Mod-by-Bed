@@ -23,8 +23,45 @@ namespace ConfuserEx_Unpacker.Protections.Compressor
         public override void Deobfuscate()
         {
            
-                UnpackModule(ModuleDef);
-            
+                UnpackTrinity(ModuleDef);
+            if (IsPacked(ModuleDef))
+            {
+                UnpackKoi(ModuleDef);
+            }
+            else
+            {
+                Checkkoi("'Koi' was not found, would you like to force compressor protecion anyways?");
+            }
+
+        }
+       
+        private void UnpackNoKoi(ModuleDefMD module)
+        {
+            var ep = module.EntryPoint;
+            var emulator = new Emulation(ep);
+            emulator.OnCallPrepared += (emulation, args) =>
+            {
+                var instr = args.Instruction;
+                Utils.HandleCall(args, emulation);
+            };
+            emulator.OnInstructionPrepared += (emulation, args) =>
+            {
+                if (args.Instruction.OpCode == OpCodes.Ldftn)
+                {
+                    emulation.ValueStack.CallStack.Push(null);
+                    args.Cancel = true;
+                }
+            };
+            emulator.Emulate();
+            if (ModuleBytes == null)
+            {
+                Base.CompressorRemoved = false;
+                return;
+            }
+
+            Protections.Base.ModuleDef = ModuleDefMD.Load(ModuleBytes);
+            Protections.Base.ModuleDef.EntryPoint = Protections.Base.ModuleDef.ResolveToken(ModuleEp) as MethodDef;
+            Base.CompressorRemoved = true;
         }
         public static bool IsPacked(ModuleDefMD module)
         {
@@ -33,28 +70,45 @@ namespace ConfuserEx_Unpacker.Protections.Compressor
             for (uint rid = 1; rid <= module.Metadata.TablesStream.FileTable.Rows; rid++)
             {
                 dnlib.DotNet.MD.RawFileRow row = new dnlib.DotNet.MD.RawFileRow();
-                module.TablesStream.TryReadFileRow(rid,out row);
+                module.TablesStream.TryReadFileRow(rid, out row);
                 string name = module.StringsStream.ReadNoNull(row.Name);
-                //if (name != "koi") continue;
+                if (name != "koi") continue;
 
 
                 return true;
             }
-
+            
             return false;
         }
-        public static string IVkey(MethodDef EntryPoint)
+        private void UnpackKoi(ModuleDefMD module)
         {
-            for (int i = 0; i < EntryPoint.Body.Instructions.Count; i++)
+            var ep = module.EntryPoint;
+            var emulator = new Emulation(ep);
+            emulator.OnCallPrepared += (emulation, args) =>
             {
-                if (EntryPoint.Body.Instructions[i].Operand.ToString().Contains("Convert::FromBase64String") & EntryPoint.Body.Instructions[i-1].Operand.ToString().Length == 24)
+                var instr = args.Instruction;
+                Utils.HandleCall(args, emulation);
+            };
+            emulator.OnInstructionPrepared += (emulation, args) =>
+            {
+                if (args.Instruction.OpCode == OpCodes.Ldftn)
                 {
-                    return EntryPoint.Body.Instructions[i - 1].Operand.ToString();
+                    emulation.ValueStack.CallStack.Push(null);
+                    args.Cancel = true;
                 }
+            };
+            emulator.Emulate();
+            if (ModuleBytes == null)
+            {
+                Base.CompressorRemoved = false;
+                return;
             }
-            return null;
-                }
-        private void UnpackModule(ModuleDefMD module)
+
+            Protections.Base.ModuleDef = ModuleDefMD.Load(ModuleBytes);
+            Protections.Base.ModuleDef.EntryPoint = Protections.Base.ModuleDef.ResolveToken(ModuleEp) as MethodDef;
+            Base.CompressorRemoved = true;
+        }
+        private void UnpackTrinity(ModuleDefMD module)
         {
             bool can = false;
             
@@ -94,20 +148,16 @@ namespace ConfuserEx_Unpacker.Protections.Compressor
                     }
                 }
                 string arrayKey = "";
-                for (int i = 0; i < module.EntryPoint.Body.Instructions.Count; i++)
-                {
-                    if (module.EntryPoint.Body.Instructions[i].OpCode == OpCodes.Ldstr)
+                    for (int i = 0; i < module.EntryPoint.Body.Instructions.Count; i++)
                     {
-                        if (module.EntryPoint.Body.Instructions[i].Operand.ToString().Length > 200)
+                        if (module.EntryPoint.Body.Instructions[i].OpCode == OpCodes.Ldstr)
                         {
-                            arrayKey = module.EntryPoint.Body.Instructions[i].Operand.ToString();
+                            if (module.EntryPoint.Body.Instructions[i].Operand.ToString().Length > 200)
+                            {
+                                arrayKey = module.EntryPoint.Body.Instructions[i].Operand.ToString();
+                            }
                         }
                     }
-                }
-
-
-                //string Key = Otherkey(epp);
-                //string bigarray = GetArray(epp);
                 RijndaelManaged rijndaelManaged = new RijndaelManaged();
                 rijndaelManaged.KeySize = 256;
                 rijndaelManaged.Key = Convert.FromBase64String(key);
@@ -124,12 +174,7 @@ namespace ConfuserEx_Unpacker.Protections.Compressor
                 memoryStream.Close();
                 cryptoStream.Dispose();
                 memoryStream.Dispose();
-
-                //Protections.Base.ModuleDef.EntryPoint = Protections.Base.ModuleDef.ResolveToken(ModuleEp) as MethodDef;
-                Base.CompressorRemoved = true;
-
-
-            }
+                Base.CompressorRemoved = true;    }
             catch(Exception ex)
             {
                 Console.Write(ex.ToString());
@@ -138,35 +183,30 @@ namespace ConfuserEx_Unpacker.Protections.Compressor
                 
             
         }
-       
-        //Protections.Base.ModuleDef = ModuleDefMD.Load(ModuleBytes);
-        //    Protections.Base.ModuleDef.EntryPoint = Protections.Base.ModuleDef.ResolveToken(ModuleEp) as MethodDef;
-        //    Base.CompressorRemoved = true;
-
-        public static string Otherkey(MethodDef EntryPoint)
+        public string Checkkoi(string Question)
         {
-            for (int i = 0; i < EntryPoint.Body.Instructions.Count; i++)
+
+            Console.WriteLine(Question);
+            Console.Read();
+            while (true)
             {
-                if (EntryPoint.Body.Instructions[i].Operand.ToString().Contains("Convert::FromBase64String") && EntryPoint.Body.Instructions[i - 1].Operand.ToString().Length == 44)
+               
+                ConsoleKeyInfo KeyInfoPressed = Console.ReadKey();
+                switch (KeyInfoPressed.Key)
                 {
-                    return EntryPoint.Body.Instructions[i - 1].Operand.ToString();
+                    case ConsoleKey.Y:
+                        UnpackNoKoi(ModuleDef);
+
+                        break;
+                    case ConsoleKey.N:
+
+                        break;
+
+                  
                 }
             }
-            return null;
         }
-        public static string GetArray(MethodDef EntryPoint)
-        {
-            for (int i = 0; i < EntryPoint.Body.Instructions.Count; i++)
-            {
-                if (EntryPoint.Body.Instructions[i].Operand.ToString().Contains("Convert::FromBase64String") && EntryPoint.Body.Instructions[i - 1].Operand.ToString().Length >100)
-                {
-                    return EntryPoint.Body.Instructions[i - 1].Operand.ToString();
-                }
-            }
-            return null;
-        }
-
-
+    
         public static GCHandle HandleDecryptMethod(Emulation mainEmulation, CallEventArgs mainArgs, MethodDef decryptionMethod)
         {
             var decEmulation = new Emulation(decryptionMethod);

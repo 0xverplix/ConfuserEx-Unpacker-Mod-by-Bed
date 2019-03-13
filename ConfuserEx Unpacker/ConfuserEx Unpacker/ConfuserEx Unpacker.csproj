@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -79,12 +79,15 @@
     <Compile Include="Protections\Antitamper\Remover.cs" />
     <Compile Include="Protections\Base.cs" />
     <Compile Include="Protections\Compressor\Remover.cs" />
-    <Compile Include="Protections\Constants\MathsEquations.cs" />
     <Compile Include="Protections\Constants\Remover.cs" />
-    <Compile Include="Protections\Constants\SizeOf.cs" />
     <Compile Include="Protections\Control Flow\De4Dot.cs" />
+    <Compile Include="Protections\Control Flow\ExpressionRemover.cs" />
     <Compile Include="Protections\Control Flow\Remover.cs" />
+    <Compile Include="Protections\Control Flow\StackEmulator.cs" />
     <Compile Include="Protections\LZMA.cs" />
+    <Compile Include="Protections\Maths\MathsEquations.cs" />
+    <Compile Include="Protections\Maths\Remover.cs" />
+    <Compile Include="Protections\Maths\SizeOf.cs" />
     <Compile Include="Protections\RefProxy\DelegateFinder.cs" />
     <Compile Include="Protections\RefProxy\DelegateFixer.cs" />
     <Compile Include="Protections\RefProxy\DelegateInitInfo.cs" />

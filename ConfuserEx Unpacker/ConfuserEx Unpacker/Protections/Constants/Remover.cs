@@ -1,8 +1,11 @@
 ﻿using CawkEmulatorV4;
 using dnlib.DotNet;
 using dnlib.DotNet.Emit;
+using dnlib.DotNet.MD;
+using dnlib.DotNet.Writer;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,8 +21,6 @@ namespace ConfuserEx_Unpacker.Protections.Constants
             byte[] bytes = InitaliseBytes(FindInitialiseMethod());
             if (bytes == null)
                 return;
-            MathsEquations.MathsFixer(ModuleDef);
-            SizeOf.SizeOfFixer(ModuleDef);
             DecryptionMethod(ModuleDef, bytes);
         }
         public static List<Instruction> C = new List<Instruction>();
@@ -129,9 +130,12 @@ namespace ConfuserEx_Unpacker.Protections.Constants
         #endregion
 
         #region Cleaner
+      
+
         public static bool regconfuser;
         public static void DecryptionMethod(ModuleDefMD module, byte[] bytes)
         {
+
             regconfuser = false;
             try
             {
@@ -152,7 +156,7 @@ namespace ConfuserEx_Unpacker.Protections.Constants
                                 {
                                     if (methods.Body.Instructions[i].Operand.ToString().Contains("System.String"))
                                     {
-                                        var paramsCount = decryptionMethod.Parameters.Count;
+                                        var paramsCount = decryptionMethod.Parameters.Count; //integeer
 
                                         var paramss = new object[paramsCount];
                                         if (paramsCount == 1)
@@ -173,45 +177,67 @@ namespace ConfuserEx_Unpacker.Protections.Constants
 
                                             paramss[2] = methods.Body.Instructions[i - 6].Operand;
 
-                                            Console.WriteLine("Trinity Detected, running 3 param method");
+
                                         }
-                                        else if(paramsCount == 2)
+                                        else if (paramsCount == 2)
                                         {
                                             paramss[0] = methods.Body.Instructions[i - 1].Operand;
                                             paramss[1] = methods.Body.Instructions[i - 1].Operand;
-                                            Console.WriteLine("Netguard 4.5 Detected, running 2 param method");
-                                        }
 
-                                        if (paramss.Any(g => g == null))
-                                        {
-                                            continue;
-                                            
                                         }
-                                        var result = DecryptConstant(decryptionMethod, paramss, bytes);
-                                        if (result != null)
+                                        else if (paramsCount > 3)
                                         {
-                                            methods.Body.Instructions[i].OpCode = OpCodes.Ldstr;
-                                            methods.Body.Instructions[i].Operand = result.ToString();
-                                            if (regconfuser == false)
+                                            Console.WriteLine("Running dynamic constant decryption");
+                                            paramss[0] = methods.Body.Instructions[i - 1].Operand;
+                                            for (int f = 1; f < paramsCount; f++)
                                             {
-                                                for (int y = 0; y < 10; y++)
-                                                {
-                                                    if (methods.Body.Instructions[i - y].OpCode == OpCodes.Ldc_I4)
-                                                        methods.Body.Instructions[i - y].OpCode = OpCodes.Nop;
 
-                                                    if (methods.Body.Instructions[i - y].OpCode == OpCodes.Ldstr)
+                                                if (methods.Body.Instructions[i - 1].IsLdcI4())
+                                                {
+                                                    paramss[f] = methods.Body.Instructions[i - 1].Operand;
+                                                }
+                                                else if (methods.Body.Instructions[i - 1].Operand == OpCodes.Ldstr)
+                                                {
+                                                    paramss[f] = "k";
+                                                }
+                                                else
+                                                {
+                                                    paramss[f] = methods.Body.Instructions[i - 1].Operand;
+                                                }
+
+                                            }
+
+                                            if (paramss.Any(g => g == null))
+                                            {
+                                                continue;
+
+                                            }
+                                            var result = DecryptConstant(decryptionMethod, paramss, bytes);
+                                            if (result != null)
+                                            {
+                                                methods.Body.Instructions[i].OpCode = OpCodes.Ldstr;
+                                                methods.Body.Instructions[i].Operand = result.ToString();
+                                                if (regconfuser == false)
+                                                {
+                                                    for (int y = 0; y < 10; y++)
                                                     {
-                                                        if (y != 0)
+                                                        if (methods.Body.Instructions[i - y].OpCode == OpCodes.Ldc_I4)
                                                             methods.Body.Instructions[i - y].OpCode = OpCodes.Nop;
+
+                                                        if (methods.Body.Instructions[i - y].OpCode == OpCodes.Ldstr)
+                                                        {
+                                                            if (y != 0)
+                                                                methods.Body.Instructions[i - y].OpCode = OpCodes.Nop;
+                                                        }
                                                     }
                                                 }
+
+                                                //methods.Body.Instructions[i - 1].OpCode = OpCodes.Nop;
+                                                //methods.Body.Instructions[i - 7].OpCode = OpCodes.Nop;
+                                                //methods.Body.Instructions[i - 6].OpCode = OpCodes.Nop;
+                                                //Console.WriteLine("Decrypted string {0}", result);
+                                                //Console.Read();
                                             }
-                                                   
-                                            //methods.Body.Instructions[i - 1].OpCode = OpCodes.Nop;
-                                            //methods.Body.Instructions[i - 7].OpCode = OpCodes.Nop;
-                                            //methods.Body.Instructions[i - 6].OpCode = OpCodes.Nop;
-                                            //Console.WriteLine("Decrypted string {0}", result);
-                                            //Console.Read();
                                         }
                                     }
                                 }
@@ -220,12 +246,13 @@ namespace ConfuserEx_Unpacker.Protections.Constants
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.Write(ex.ToString());
                 Console.Read();
             }
-            }
+
+        }
 
         #endregion
     }

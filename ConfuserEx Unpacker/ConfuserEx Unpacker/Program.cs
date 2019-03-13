@@ -22,10 +22,12 @@ namespace ConfuserEx_Unpacker
             /////////////////////////////////////////////////////////////////
                new Protections.Antitamper.Remover(),
                new Protections.Control_Flow.Remover(),
+                 new Protections.Control_Flow.ExpersionRemover(),
                new Protections.RefProxy.Remover(),
                new Protections.Control_Flow.Remover(),
                new Protections.RefProxy.Remover(),
                 new Protections.Control_Flow.Remover(),
+                  new Protections.Control_Flow.ExpersionRemover(),
                new Protections.Constants.Remover()
 
         };
@@ -47,11 +49,11 @@ namespace ConfuserEx_Unpacker
                 base1.Deobfuscate();
             }
 
-            //if (Protections.Compressor.Remover.ModuleEp != 0)
-            //{
-            //    Base.ModuleDef.EntryPoint =
-            //        Base.ModuleDef.ResolveToken(Protections.Compressor.Remover.ModuleEp) as MethodDef;
-            //}
+            if (Protections.Compressor.Remover.ModuleEp != 0)
+            {
+                Base.ModuleDef.EntryPoint =
+                    Base.ModuleDef.ResolveToken(Protections.Compressor.Remover.ModuleEp) as MethodDef;
+            }
 
             ModuleWriterOptions ModOpts = new ModuleWriterOptions(Base.ModuleDef);
             ModOpts.MetadataOptions.Flags = MetadataFlags.PreserveAll;
