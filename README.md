@@ -1,8 +1,8 @@
-# ConfuserEx Unpacker (Supports Trinity, Netguard 4.5, and some of modded cfx)
+# ConfuserEx Unpacker (Supports many modded confusers )
 
 
 
-This is my own "mod" of this unpacker, ive added constant support for 2 parameter decryption support (Netguard 4.5, Ben Mhenni 4.5), and i added support for 3 parameters with string (Trinity). Added support for the packer in trinity  You can easily clean programs piece by piece or however you want by editing the program.cs. Updating on this project will continute to update and protections do.
+This is my own "mod" of this unpacker, ive added constant support for 2 parameter decryption support (Netguard 4.5, Ben Mhenni 4.5), and i added support for 3 parameters so it contains support for trinitys constants. Added support for the packer that was added in trinity  You can easily clean programs piece by piece or however you want by editing the program.cs. Updating on this project will continute to update and protections do.
 
 ////////////////////////////////////////////////////////////
 
@@ -24,4 +24,5 @@ Credits
 TheProxy for his Reference Proxy Remover
 Shadow Anti Tamper remover
 0xd4d dnlib/de4dot
-cawk confuserex-unpacker / mutation removers
+cawk confuserex-unpacker
+CodeCracker Control Flow cleaner
